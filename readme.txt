@@ -1,38 +1,49 @@
-@"
-# 🚀 PriceAPI.pl - Ceny z Allegro (LIVE!)
+```markdown
+# 🚀 PriceAPI.pl - Ceny Allegro LIVE!
 
-## 🟢 Endpoint LIVE:
-\`GET https://qopylxd8ck.execute-api.eu-west-1.amazonaws.com/prod/prices\`
+## 📡 Endpoint (API Key required):
+```
+https://qopylxd8ck.execute-api.eu-west-1.amazonaws.com/prod/prices
+```
 
-## 📱 Testuj teraz:
+## 🧪 Testuj (z kluczem API):
+
 **curl:**
-\`\`\`bash
-curl https://qopylxd8ck.execute-api.eu-west-1.amazonaws.com/prod/prices
-\`\`\`
+```bash
+curl -H "x-api-key: YOUR_API_KEY" https://qopylxd8ck.execute-api.eu-west-1.amazonaws.com/prod/prices
+```
 
 **Python:**
-\`\`\`python
+```python
 import requests
-r = requests.get('https://qopylxd8ck.execute-api.eu-west-1.amazonaws.com/prod/prices')
+headers = {"x-api-key": "YOUR_API_KEY"}
+r = requests.get("https://qopylxd8ck.execute-api.eu-west-1.amazonaws.com/prod/prices", headers=headers)
 print(r.json())
-\`\`\`
+```
 
 ## 📊 Dane LIVE (2026-01-18):
-\`\`\`json
-{
-  \"message\": \"PriceAPI v1 - MVP working\",
-  \"count\": 3,
-  \"products\": [
-    {\"name\": \"Xiaomi Mi Band 7\", \"price\": \"179 PLN\", \"stock\": \"Dostępny\"},
-    {\"name\": \"Samsung Galaxy Watch 6\", \"price\": \"899 PLN\", \"stock\": \"Dostępny\"}
-  ]
-}
-\`\`\`
+```
+Xiaomi Mi Band 7 → 179 PLN (Dostępny) ✅
+Samsung Galaxy Watch 6 → 899 PLN ✅
+Amazfit GTS 4 → 699 PLN (Brak)  
+```
 
-## 💰 Biznes:
-- Mock → Allegro OAuth (next)
-- API Gateway → Custom domain
-- Stripe billing ready
+## 💰 Pricing:
+```
+Pro Plan: 49 PLN/miesiąc = 10k requests/dzień
+Enterprise: Kontakt
 
-**Kontakt: @malcz (Telegram/Discord)**
-"@ | Out-File -FilePath "README.md" -Encoding UTF8
+API Key + billing po Stripe
+```
+
+## 📞 Kontakt:
+```
+Telegram: 
+Email: 
+```
+
+## 🚀 Deployment:
+```
+AWS Lambda + API Gateway + Usage Plans
+Repo zawiera pełny stack deployment
+```
