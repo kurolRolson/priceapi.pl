@@ -1,0 +1,12 @@
+=== PRICEAPI v1 BACKUP ===
+Data: 2026-01-18
+
+1. Lambda ARN: arn:aws:lambda:eu-west-1:324634181616:function:allegro-price-scraper
+2. API Gateway ID: qopylxd8ck
+3. Region: eu-west-1 (Ireland)
+4. Endpoint: https://qopylxd8ck.execute-api.eu-west-1.amazonaws.com/prod/prices
+5. Account ID: 324634181616
+
+TEST (2026-01-18):
+Xiaomi Mi Band 7 → 179 PLN ✅
+Samsung Galaxy Watch 6 → 899 PLN ✅
